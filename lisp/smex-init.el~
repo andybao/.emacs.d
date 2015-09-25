@@ -1,0 +1,7 @@
+;;----------------------------------------------------------------------------
+;; smex provides a convenient interface to commands
+;;----------------------------------------------------------------------------
+
+(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
+		  ; when Smex is auto-initialized on its first run.
+
