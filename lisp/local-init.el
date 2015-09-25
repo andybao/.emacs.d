@@ -30,9 +30,26 @@
 (scroll-bar-mode 0)
 ;; Line number display
 (global-linum-mode t)
-;; 默认显示 80列就换行
+;; Set colum number 
 (setq default-fill-column 80)
 ;; column number display
 (setq column-number-mode t)
+
+;;---------------------------------------------------------------------------
+;;swap yes and no
+;;---------------------------------------------------------------------------
+
+(fset 'yes-or-no-p 'y-or-n-p)
+;;(blink-cursor-mode -1) 
+;;(transient-mark-mode 1) 
+
+;;---------------------------------------------------------------------------
+;;org mode
+;;---------------------------------------------------------------------------
+(setq org-src-fontify-natively t)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
+
 
 (provide 'local-init)
