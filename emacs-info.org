@@ -1,3 +1,4 @@
+
     C = Control
     M = Meta = Alt | Esc
     Del = Backspace
@@ -18,6 +19,7 @@
     M-C-\ 在区域中缩排练
     C-x C-e 执行语句，返回值出现在回显区
     C-u C-x C-e 执行语句，返回值出现在缓冲区
+    (golbal-set-key (kbd "xxx") 'xxx) 绑定快捷键
 *   中文乱码解决方案
 C-x RET r 
 chinese-gbk-dos
@@ -98,6 +100,9 @@ RET
     C-x b 新建/切换缓冲区
     C-x C-b 显示缓冲区列表
     C-x k 关闭当前缓冲区
+    C-h m (describe-mode) 查看模块文档
+    C-h b (describe-bindings) 查看当前buffer快捷键列表
+    C-h k (describe-key) 查看快捷键
     C-z 挂起emacs (return to emacs by fg)
     C-x C-c 关闭emacs
 
