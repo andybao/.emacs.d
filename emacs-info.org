@@ -1,0 +1,185 @@
+    C = Control
+    M = Meta = Alt | Esc
+    Del = Backspace
+    RET = Enter
+*   pomodoro
+    C-c t s start
+    C-c t p pause
+    C-c t e stop
+*   sr-speedbar
+    + Display a list of tags from the file
+    - Retract the list
+*   org-mode
+    标题加TODO
+    C-c C-t 修改当前状态
+    C-c C-a a 添加附件
+    *粗体*
+*   Lisp
+    M-C-\ 在区域中缩排练
+    C-x C-e 执行语句，返回值出现在回显区
+    C-u C-x C-e 执行语句，返回值出现在缓冲区
+*   中文乱码解决方案
+C-x RET r 
+chinese-gbk-dos
+RET
+*   w3m
+基本操作
+    q 挂起
+    Q 退出
+    C-x k n RET 关闭第n个buffer，若什么都不输入则关闭当前buffer
+    U 打开URL
+    v 打开文件(Bookmarks Aaron.bookmark)，查看书签
+    G 在新的标签页中打开URL
+    g 在当前标签页中打开URL
+    S 用googl进行搜索(自定义的搜索引擎)
+    s 历史(当前标签页的)
+    H 主页
+    R 刷新
+    B 返回
+    N 前进(RET)
+
+页面操作
+    C-n 向下一行
+    C-p 向上一行
+    C-f 向前
+    C-b 向后
+    C-v 向下滚屏
+    M-v 向上滚屏
+    > 向右滚屏
+    < 向左滚屏
+    , 向左滚一格
+    . 向右滚一格
+    C-c C-w 删除当前页
+    C-c M-w 删除其他页
+
+书签操作
+    a 添加当前页到书签
+    M-a 添加该URL到书签
+    C-c C-t 复制当前页到新标签
+    C-c C-p 上一个标签
+    C-c C-n 下一个标签
+
+焦点操作
+    M-g 跳到第n行
+    C-c C-@ 标记当前位置
+    C-c C-v 跳到上次标记的位置
+    TAB 下一个衔接
+    M-TAB 上一个衔接
+*   编程(Programming)
+    M C-\ 自动缩进光标和标记间的区域
+    M-m 移动光标到行首第一个(非空格)字符
+    M-^ 将当前行接到上一行末尾处
+    M-; 添加缩进并格式化的注释
+    C, C++和Java模式
+    M-a 移动光标到声明的开始处
+    M-e 移动光标到声明的结尾处
+    M C-a 移动光标到函数的开始处
+    M C-e 移动光标到函数的结尾处
+    C-c RETURN 将光标移动到函数的开始处并标记到结尾处
+    C-c C-q 根据缩进风格缩进整个函数
+    C-c C-a 切换自动换行功能
+    C-c C-d 一次性删除光标后的一串空格(greedy delete)
+      
+    为了实现下面的一些技术, 你需要在保存源代码的目录里运行"etags
+    *.c *.h *.cpp"(或者源代码的其他的扩展名)
+    M-.(点) 搜索标签
+    M-x tags-search ENTER 在所有标签里搜索(使用正则表达式)
+    M-,(逗号) 在tags-search里跳至下一个匹配处
+    M-x tags-query-replace 在设置过标签的所有文件里替换文本
+
+*   基本快捷键(Basic)
+    C-x C-f "find"文件, 即在缓冲区打开/新建一个文件
+    C-x C-r 以只读模式打开文件
+    C-x C-q 切换当前文件：只读／读写
+    C-x C-s 保存文件
+    C-x C-w 使用其他文件名另存为文件
+    C-x C-v 关闭当前缓冲区文件并打开新文件
+    C-x i 在当前光标处插入文件
+    C-x b 新建/切换缓冲区
+    C-x C-b 显示缓冲区列表
+    C-x k 关闭当前缓冲区
+    C-z 挂起emacs (return to emacs by fg)
+    C-x C-c 关闭emacs
+
+*   窗口命令(Window Commands)
+    C-x 2 水平分割窗格
+    C-x 3 垂直分割窗格
+    C-x o 切换至其他窗格
+    C-x 0 关闭窗格
+    C-x 1 关闭除了光标所在窗格外所有窗格
+    C-x ^ 扩大窗格
+    M-x shrink-window 缩小窗格
+    M C-v 滚动其他窗格内容
+    C-x 4 f 在其他窗格中打开文件
+    C-x 4 0 关闭当前缓冲区和窗格
+    C-x 5 2 新建窗口(frame)
+    C-x 5 f 在新窗口中打开文件
+    C-x 5 o 切换至其他窗口
+    C-x 5 0 关闭当前窗口
+    C-x b 当前窗口切换至其它缓冲区
+*   光标移动基本快捷键(Basic Movement)
+    C-f 后一个字符
+    C-b 前一个字符
+    C-p 上一行
+    C-n 下一行
+    M-f 后一个单词
+    M-b 前一个单词
+    C-a 行首
+    C-e 行尾
+    C-v 向下翻一页
+    M-v 向上翻一页
+    M-< 到文件开头
+    M-> 到文件末尾
+    M-m 移动到第一个非空格字符
+    M-r 加参数，移动到窗口里的某一行。不加参数缺省移动到窗口中间
+      
+*   编辑(Editint)
+    M-n 重复执行后一个命令n次
+    C-u 重复执行后一个命令4次
+    C-u n 重复执行后一个命令n次
+    C-d 删除(delete)后一个字符
+    M-d 删除后一个单词 kill-word
+    Del 删除前一个字符
+    M-Del 删除前一个单词 backward-kill-word
+    C-k 移除(kill)一行 kill-line
+    C-k Del 向前移除一行 backward-kill-line
+    M-k 移除一句 kill-sentence
+      
+    C-Space 设置开始标记 (例如标记区域)
+    C-@ 功能同上, 用于C-Space被操作系统拦截的情况
+    C-w 移除(kill)标记区域的内容
+    M-w 复制标记区域的内容
+    C-y 召回(yank)复制/移除的区域/行
+    M-y 召回更早的内容 (在kill缓冲区内循环)
+    C-x C-x 交换光标和标记
+    C-x h mark whole buffer
+      
+    C-t 交换两个字符的位置
+    M-t 交换两个单词的位置
+    C-x C-t 交换两行的位置
+    M-u 使从光标位置到单词结尾处的字母变成大写
+    M-l 与M-u相反
+    M-c 使从光标位置开始的单词的首字母变为大写
+      
+*   重要快捷键(Important)
+    C-g 停止当前运行/输入的命令
+    C-x u 撤销前一个命令
+    M-x revert-buffer RETURN (照着这个输入)撤销上次存盘后所有改动
+    M-x recover-file RETURN 从自动存盘文件恢复
+    M-x recover-session RETURN 如果你编辑了几个文件, 用这个恢复
+
+*   搜索/替换(Seach/Replace)
+    C-s 向后搜索
+    C-r 向前搜索
+    C-g 回到搜索开始前的位置(如果你仍然在搜索模式中)
+    M-% 询问并替换(query replace)
+      
+    Space或y 替换当前匹配
+    Del或n 不要替换当前匹配
+    . 仅仅替换当前匹配并退出(替换)
+    , 替换并暂停(按Space或y继续)
+    ! 替换以下所有匹配
+    ^ 回到上一个匹配位置
+    RETURN或q 退出替换
+
+
